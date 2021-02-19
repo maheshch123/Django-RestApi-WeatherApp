@@ -1,0 +1,90 @@
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Home</title>
+     <style>
+        span{
+            color: blue;
+        }
+    </style>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+ </head>
+ <body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">API KEY</a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            
+            
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+ 
+            <li><a href="{% url 'logout' %}"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+
+          </ul>
+        </div>
+      </nav><br><br>
+
+    
+    <h3 style="text-align: center;">WELCOME  :<span> {{user.username.upper}}</span>,</h3> <br>
+  
+     <h3> your API Key : <span>{{user.auth_token}}</span></h3> <br>
+
+     
+     <h3>How to make an API call</h3><br>
+     <h4>API call:</h4> <br>
+     
+    <pre style="width: 50%;"><h4><code>
+    url = "http://127.0.0.1:8000/RestApi/?search={}&"
+
+    headers = {'Authorization': 'Token YOUR API KEY HERE'}
+  </code>
+</h4>
+    </pre>
+
+
+     <h2 style="padding: 20px;">Example of API response</h2><br>
+
+     <pre style="width: 50%;"><code>
+      [
+      {
+          "id": 1,
+          "City": "srikalahasti",
+          "Temperature": 28,
+          "Description": "broken clouds",
+          "Icon": "http://127.0.0.1:8000/media/icon_pics/zTXokqzzcnn_Yt6b2Q4.jpg",
+          "Country": "india"
+      },
+      {
+          "id": 2,
+          "City": "tirupathi",
+          "Temperature": 35,
+          "Description": "rainy",
+          "Icon": "http://127.0.0.1:8000/media/icon_pics/zTXokqzzckj_ItyP7rJ.jpg",
+          "Country": "india"
+      },
+      {
+          "id": 3,
+          "City": "hyderabad",
+          "Temperature": 27,
+          "Description": "lightning",
+          "Icon": "http://127.0.0.1:8000/media/icon_pics/zTXokqzzcloi.jpg",
+          "Country": "india"
+      },
+      ]
+     </code></pre>
+
+     
+ </body>
+ </html>
+  
