@@ -20,7 +20,7 @@
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
           <div class="navbar-header">
-            <a class="navbar-brand" href="#">API KEY</a>
+            <a class="navbar-brand" href="#">WebSiteName</a>
           </div>
           <ul class="nav navbar-nav">
             <li class="active"><a href="#">Home</a></li>
@@ -36,16 +36,14 @@
       </nav><br><br>
 
     
-    <h3 style="text-align: center;">WELCOME  :<span> {{user.username.upper}}</span>,</h3> <br>
+    <h3>WELCOME  :<span> {{user.username.upper}}</span>,</h3> 
   
-     <h3> your API Key : <span>{{user.auth_token}}</span></h3> <br>
-
-     
+     <h3> your API Key : <h4 style="color: blue;">{{user.auth_token}}</h4> </h3> <br>
      <h3>How to make an API call</h3><br>
      <h4>API call:</h4> <br>
      
-    <pre style="width: 50%;"><h4><code>
-    url = "http://127.0.0.1:8000/RestApi/?search={}&"
+    <pre style="width:100%"><h4><code>
+    url = "https://maheshch123-django-restapi-weatherapp-8624.zeet.app/RestApiRestApi/"
 
     headers = {'Authorization': 'Token YOUR API KEY HERE'}
   </code>
@@ -54,8 +52,8 @@
 
 
      <h2 style="padding: 20px;">Example of API response</h2><br>
-
-     <pre style="width: 50%;"><code>
+  
+     <pre style="width:100%"><h4><code>
       [
       {
           "id": 1,
@@ -84,6 +82,7 @@
       ]
      </code></pre>
 
+     
      
  </body>
  </html>
